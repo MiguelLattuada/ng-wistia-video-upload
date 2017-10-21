@@ -1,31 +1,35 @@
 <html>
-    <head>
-        <title>Ng example</title>
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-        <link rel="stylesheet" href="../dist/styles.css">
-        <style>
-            body {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
-            wistia-video-uploader {
-                width: 550px;
-            }
-        </style>
-    </head>
-    <body>
-        <wistia-video-uploader api-password="'b8fe3866c5bcbf435cb018a55fff47c37a08a1e2bf9f8897388edddd485beb68'"></wistia-video-uploader>
-        <!-- Jquery file uploader dependencies -->
-        <script src="vendors/jQuery-File-Upload-9.19.1/js/vendor/jquery.ui.widget.js"></script>
-        <script src="vendors/jQuery-File-Upload-9.19.1/js/jquery.iframe-transport.js"></script>
-        <script src="vendors/jQuery-File-Upload-9.19.1/js/jquery.fileupload.js"></script>
 
-        <script src="../dist/ng-wistia-video-uploader.min.js"></script>
-        <script>
-            angular.module('my-app', ['wistia-video-uploader'])
-            angular.bootstrap(document.body, ['my-app']);
-        </script>
-    </body>
+<head>
+    <title>Ng example</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="../dist/styles.css">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        wistia-video-uploader {
+            width: 550px;
+        }
+    </style>
+</head>
+
+<body>
+    <wistia-video-uploader api-password="'b8fe3866c5bcbf435cb018a55fff47c37a08a1e2bf9f8897388edddd485beb68'"></wistia-video-uploader>
+    <!-- Jquery file uploader dependencies -->
+    <script src="vendors/jQuery-File-Upload-9.19.1/js/vendor/jquery.ui.widget.js"></script>
+    <script src="vendors/jQuery-File-Upload-9.19.1/js/jquery.iframe-transport.js"></script>
+    <script src="vendors/jQuery-File-Upload-9.19.1/js/jquery.fileupload.js"></script>
+
+    <script src="../dist/ng-wistia-video-uploader.min.js"></script>
+    <script>
+        angular.module('my-app', ['wistia-video-uploader'])
+        angular.bootstrap(document.body, ['my-app']);
+    </script>
+</body>
+
 </html>
