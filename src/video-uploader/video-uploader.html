@@ -1,0 +1,16 @@
+<form novalidate>
+    <fieldset ng-show="!$ctrl.viewModel.currentHashedId" ng-disabled="!$ctrl.viewModel.wistiaUrl">
+        <legend>Upload a video to Wistia!</legend>
+        <div class="video-uploader-pb">
+            {{ $ctrl.viewModel.progressPercentage || 0 }}%
+        </div>
+        <div class="video-uploader-bar" ng-style="$ctrl.viewModel.barStyles"></div>
+        <input type="file" accept="video/*" class="video-uploader-fu" name="files[]" multiple>
+        <button class="video-uploader-btn" ng-click="$ctrl.selectAndUploadFile()" ng-disabled="$ctrl.viewModel.actionInProgress" ng-bind-template="{{ $ctrl.viewModel.actionInProgress ? 'Uploading...': 'Select file' }}"></button>
+        <span class="video-uploder-fn" ng-if="$ctrl.viewModel.selectedFileName" ng-bind-template="{{ $ctrl.viewModel.selectedFileName }}"></span>
+        <span class="video-uploader-msg" ng-if="$ctrl.viewModel.uploadDoneMessage" ng-class="{ error: !$ctrl.viewModel.success }" ng-bind-template="{{ $ctrl.viewModel.uploadDoneMessage }}"></span>
+    </fieldset>
+    <fieldset ng-show="$ctrl.viewModel.currentHashedId">
+        <wistia-video-embed hash-id="$ctrl.viewModel.currentHashedId"></wistia-video-embed>
+    </fieldset>
+</form>

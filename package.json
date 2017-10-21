@@ -1,0 +1,30 @@
+{
+  "name": "wistia-video-uploader",
+  "version": "0.0.1",
+  "description": "Wistia video uploder",
+  "main": "main.module.js",
+  "scripts": {
+    "test": "karma start",
+    "build": "browserify -t [ stringify --extensions [.html .hbs] ] src/module.js > dist/ng-wistia-video-uploader.min.js"
+  },
+  "keywords": [
+    "wistia",
+    "video",
+    "uploader"
+  ],
+  "author": "Miguel Lattuada",
+  "license": "ISC",
+  "devDependencies": {
+    "angular": "^1.6.6",
+    "angular-mocks": "^1.6.6",
+    "blueimp-file-upload": "^9.19.1",
+    "browserify": "^14.4.0",
+    "jasmine": "^2.8.0",
+    "jquery": "^3.2.1",
+    "karma": "^1.7.1",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-jasmine": "^1.1.0",
+    "karma-opera-launcher": "^1.0.0",
+    "stringify": "^5.1.0"
+  }
+}
